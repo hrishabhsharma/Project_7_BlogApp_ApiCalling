@@ -1,0 +1,102 @@
+.Main-Body{
+    padding-top: 8.5em;
+    display: flex;
+    justify-content: space-between;
+    max-width: 80vw;
+    margin: auto;
+    margin-bottom: 2em;
+    & .Left-Tile{
+        width: 60%;
+    }
+    & .Right-Tile{
+        width: 30%;
+    }
+}
+
+.Tile-Head{
+    text-transform: capitalize;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+.bottom-line {
+    border: 2px solid #f08080;
+    margin: 10px 0px;
+    width: 70px;
+}
+.All-Cards , .Top-Cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    /* margin-bottom: 1em */
+}
+.Toggle_Button{
+    display: flex;
+    gap: 0.5em;
+    margin: 0.5em 0.2em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.Hide{
+    display: none;
+    transition: all 2s ease;
+    transition-delay: 2s;
+}
+
+.advertise{
+    margin-top: 2em;
+    height: 25em;
+    /* width: 100%; */
+    /* text-align: center; */
+    /* border: 2px solid black; */
+}
+
+@media screen and (max-width: 900px){
+    .Main-Body{
+        max-width: 90vw;
+        & .Right-Tile{
+        width: 35%;
+        }
+    }
+    .Tile-Head{
+        font-size: 2em;
+        font-weight: 500;
+    }
+    .bottom-line {
+        width: 50px;
+    }
+    .All-Cards , .Top-Cards{
+        gap: 0.5em;
+    }
+    .Toggle_Button{
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-width:280px) and (max-width:555px){
+    .Main-Body{
+        padding-top: 7em;
+        flex-direction: column;
+        margin-top: 1em;
+        & .Left-Tile , .Right-Tile{
+            width: 100%;
+            margin-bottom: 1em;
+        }
+    }
+    .Tile-Head{
+        font-size: 1.8em;
+    }
+    .bottom-line {
+        width: 5em;
+    }
+    .All-Cards , .Top-Cards{
+        gap: 1em;
+    }
+    .Toggle_Button{
+        font-size: 1em;
+        margin-top: 1em;
+        gap: 0.2em;
+    }
+    .advertise{
+        display: none;
+    }
+}

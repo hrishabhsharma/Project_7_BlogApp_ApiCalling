@@ -1,0 +1,273 @@
+.Card_Header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    padding: 1em 8em;
+    box-shadow: 0px 3px 6px #00000029;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & .Logo{
+        height: 100%;
+        & .left{
+            font-size: 1em;
+        }
+        & .right{
+            font-size: 2em;
+        }
+    } 
+    & .CardHeader_Logo_GetStarted{
+        border: 1px solid #03a87c;
+        color: #03a87c;
+        padding: 5px 10px;
+    }
+}
+
+.Floating_Section{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    float: left;
+    gap: 2.5rem;
+    top: 50vh;
+    left: 6em;
+    z-index: -1;
+    /* padding-right: 10px; */
+    /* clear: left; */
+}
+& .Like_Box , .Share_Box{
+    display: flex;
+    align-items: center;
+    color: #939393;
+    gap: 2rem;
+}
+& .Share_Box{
+    gap: 2.75rem;
+}
+
+.Card_Main_Body{
+    padding-top: 7em;
+    margin: auto;
+    max-width: 80vw;
+}
+
+.Back_Button_Sliding{
+    /* float: left; */
+    top: 20px;
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #212529;
+    color: #212529;
+    box-shadow: 2px 2px 2px 0px rgba(59, 58, 58, 0.5),
+                7px 7px 20px 0px rgba(0,0,0,.1),
+                4px 4px 5px 0px rgba(0,0,0,.1);
+
+    &:hover {
+        color: #fff;
+    }
+    &:hover:after {
+        left: auto;
+        right: 0;
+        width: 100%;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        direction: rtl;
+        background: #212529;
+        transition: all 0.3s ease;
+    }
+}
+
+.Content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    margin: 0px 15em;
+}
+
+.Content_Title{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.Author{
+    display: flex;
+    justify-content: space-between;
+}
+.Bottom_Author{
+    border: solid #f0f0f0;
+    border-width: 2px 0px;
+    padding: 20px 0px;
+}
+.Author_Details{
+    display: flex;
+    gap: 10px;
+}
+.Author_Details img{
+    width: 30%;
+}
+.Bottom_Author img{
+    width: 17.25%;
+}
+.Author_Details span{
+    align-self: center;
+    color: #a2a2a2;
+    font-size: .8rem;
+    line-height: 2em;
+}
+.Author_Details p{
+    font-size: 1.2rem;  
+    color: #000;
+}
+.Social_Sites{
+    display: flex;
+    align-self: center;
+    gap: 10px;
+}
+
+.Content_Image{
+    margin: 10px 0px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.Content_Desc .para{
+    margin-bottom: 10px;
+}
+
+.Lang_Tag{
+    display: flex;
+    gap: 15px;
+    color: #a2a2a2;
+}
+.Lang_Tag span{
+    background-color: #f2f2f2;
+    padding: 6px 14px;
+}
+
+@media screen and (max-width: 900px){
+    .Card_Header{
+        padding: 1em 2em;
+        & .CardHeader_Logo_GetStarted{
+            font-size: 1.2em
+        }
+    }
+    .Floating_Section{
+        gap: 1rem;
+        top: 40vh;
+        left: 3em;
+        & .Like_Box , .Share_Box{
+            gap: 1rem;
+        }
+        &  .Share_Box{
+            width: 75%;
+        }
+    }
+    .Card_Main_Body{
+        max-width: 90vw;
+    }    
+    .Back_Button_Sliding{
+        top: 10px;
+        width: 100px;
+        padding: 10px 20px;
+    }
+    .Content{
+        margin: 0px 10em;
+    }
+    .Content_Title{
+        font-size: 1.7rem;
+    }
+    .Bottom_Author{
+        padding: 10px 0px;
+    }
+    .Author_Details img{
+        width: 20%;
+    }
+    .Bottom_Author img{
+        width: 15%;
+    }
+    .Author_Details span{
+        font-size: .8rem;
+        line-height: 1.2em;
+    }
+    .Lang_Tag span{
+        background-color: #f2f2f2;
+        padding: 2px 10px;
+    }
+}
+@media only screen and (min-width:280px) and (max-width:555px){
+    .Card_Header{
+        & .Logo{
+            & .left{
+                margin-top: 3px;
+            }
+            & .right{
+                font-size: 2.5em;
+            }
+        } 
+    }
+    .Card_Main_Body{
+        max-width: 85vw;
+    }
+    .Floating_Section{
+        display: none;
+    }
+    .Back_Button_Sliding{
+        float: none;
+        top: 0em;
+        left: 35%;
+    }
+    .Content{
+        width: 100%;
+        margin: 1em auto;
+    }
+    .Author{
+        flex-direction: column-reverse;
+    }
+    .Author_Details{
+        gap: 1.5em;
+        & img{
+            width: 15%;
+        }
+        & span{
+            letter-spacing: 1px;
+            line-height: 2em;
+        }
+    }
+    .Bottom_Author{
+        & span{
+            line-height: 1.3em;
+        }
+    }
+    .Social_Sites{
+        align-self: flex-end;
+        & svg{
+            height: 1em;
+            width: 1em;
+        }
+    }
+    .Lang_Tag {
+        margin-top: 1em;
+    }
+}
