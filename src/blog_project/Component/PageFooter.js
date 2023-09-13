@@ -9,17 +9,17 @@ const PageFooter = () => {
     <footer>
     <div className='Footer_Body'>
         <div className='Footer_Body_Left'>
-            <div onClick={()=>Navigator('/')} className="Logo">
-                <span className="left">The </span> 
-                <span className='right'>Hrep</span>
-            </div>
-            <p>The Hrep is a Blog website where people can share their views and view other people thoughts.</p>
-            <div className='Icons'>
-                <img width="40" height="40" src="https://img.icons8.com/ios-filled/50/linkedin-circled--v1.png" alt="linkedin-circled--v1"/>
-                <img width="40" height="40" src="https://img.icons8.com/ios-filled/50/twitter-circled--v1.png" alt="twitter-circled--v1"/>
-                <img width="40" height="40" src="https://img.icons8.com/ios-filled/50/facebook-new.png" alt="facebook-new"/>
-                <img width="40" height="40" src="https://img.icons8.com/ios-glyphs/60/instagram-circle.png" alt="instagram-circle"/>
-            </div>
+           <div onClick={()=>Navigator('/')} className="Logo">
+               <span className="left">The </span> 
+               <span className='right'>Hrep</span>
+           </div>
+           <p>The Hrep is a Blog website where people can share their views and view other people thoughts.</p>
+           <div className='Icons'>
+              <img src="https://img.icons8.com/ios-filled/50/linkedin-circled--v1.png" alt="linkedin-circled--v1"/>
+              <img src="https://img.icons8.com/ios-filled/50/twitter-circled--v1.png"  alt="twitter-circled--v1"/>
+              <img src="https://img.icons8.com/ios-filled/50/facebook-new.png"         alt="facebook-new"/>
+              <img src="https://img.icons8.com/ios-glyphs/60/instagram-circle.png"     alt="instagram-circle"/>
+           </div>
         </div>
         <div className='Footer_Body_Middle'>
             <div className='Blog'>

@@ -9,17 +9,22 @@ import user from '../assets/Mask Group 16.png'
 import clap from '../assets/rythm.svg'
 import sharing from '../assets/share.svg'
 import '../css/CardDetail.css'
+import ErrorPage from './ErrorPage';
 
 const CardDetail = () => {
   const Url = useParams()
+  const Navigator = useNavigate()
   const [Api,setApi] = useState("")
   useEffect(()=>{
     axios(`https://hrishabh-blog-project.onrender.com/${Url.genre}/${Url.id}`)
     .then(res=>setApi(res.data))
     .catch(err=>console.log(err))
   },[Url])
-  const Navigator = useNavigate()
-
+  if(Url.genre!=='bollywood' && Url.genre!=='technology' && 
+     Url.genre!=='hollywood' && Url.genre!=='fitness' && Url.genre!=='food'){
+      // console.log(Url.genre)
+      return <ErrorPage/>
+  }
   return (
     <>
       <div className='Card_Header'>

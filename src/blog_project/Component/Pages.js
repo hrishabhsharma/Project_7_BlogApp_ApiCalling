@@ -1,8 +1,6 @@
 import React , {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios'
-import HeadNavbar from './HeadNavbar';
-import PageFooter from './PageFooter';
 import { ScrollToTop } from './HelpingFunction';
 import Advertise from '../assets/3573754.jpg'
 import DownArrow from '../assets/arrow.svg'
@@ -26,7 +24,6 @@ const Pages = ({category}) => {
   }
   return (
     <>
-    <HeadNavbar/>
     <div className='Main-Body'>
       <div className='Left-Tile'>
         <div className='Tile-Head'>{category}</div>
@@ -91,7 +88,6 @@ const Pages = ({category}) => {
         </div>
       </div>
     </div>
-    <PageFooter/>
     </>
 
   )

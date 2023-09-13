@@ -31,6 +31,10 @@ Footer{
     }
     & .Icons{
         display: flex;
+        & img{
+            width:  40px;
+            height: 40px;
+        }
     }
 }
 .Footer_Body_Middle{
